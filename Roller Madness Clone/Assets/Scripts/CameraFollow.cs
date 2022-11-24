@@ -19,7 +19,10 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()  //diðer updatelerle çakýþýp oyunda titrememesi için update den sonra çalýþan FixedUpdate kullandýk.
     {
-        MoveTheCamera();
+        if (target != null)
+        {
+            MoveTheCamera();
+        }
     }
 
     private void MoveTheCamera()
