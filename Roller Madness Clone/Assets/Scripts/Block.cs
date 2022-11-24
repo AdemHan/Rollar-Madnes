@@ -22,10 +22,10 @@ public class Block : MonoBehaviour
         if(isColided == false)
         {
             print(collision.gameObject.name);
-            GetComponent<MeshRenderer>().material.color = Color.red;
-            ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
-            scoreManager.score--;
-            isColided = true;
+            GetComponent<MeshRenderer>().material.color = Color.red;  // çarptýðýmýz nesnenin rengini deðiþtirmek için MeshRenderer'dan material ve rengi getirdik. en Son kýrmýzý olarak eþitledik.
+            ScoreManager scoreManager = FindObjectOfType<ScoreManager>();  // ScoreManager bulundu
+            scoreManager.score--; // score 1 azaltýldý
+            isColided = true;  // bir kez çalýþsýn diye sonda true yaptýk
         }
         
     }

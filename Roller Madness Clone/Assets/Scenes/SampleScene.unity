@@ -274,6 +274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c87100331d9114395c1a26ad74a648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameFinished: 0
+  levelFinishTime: 5
 --- !u!4 &654337725
 Transform:
   m_ObjectHideFlags: 0
@@ -939,7 +941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6318289477617076557, guid: 5fd7863289060984d81b87072299afb5, type: 3}
       propertyPath: speed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6318289477617076557, guid: 5fd7863289060984d81b87072299afb5, type: 3}
       propertyPath: stopDistance
@@ -968,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7863591492515375265, guid: f560f0109a386b54c9d06257c64fa762, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.3
+      value: 1.96
       objectReference: {fileID: 0}
     - target: {fileID: 7863591492515375265, guid: f560f0109a386b54c9d06257c64fa762, type: 3}
       propertyPath: m_LocalPosition.z

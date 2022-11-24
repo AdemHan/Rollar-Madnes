@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float stopDistance = 1f;
     void Start()
     {
-        target = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        target = GameObject.FindWithTag("Player").GetComponent<Transform>(); // player adlý tag i bulduk ve pozisyonunu çektik.
     }
 
     // Update is called once per frame
@@ -17,9 +17,9 @@ public class Enemy : MonoBehaviour
     {
         transform.LookAt(target);
         float distance = Vector3.Distance(transform.position, target.position);
-        if(distance > stopDistance)
+        if(distance > stopDistance)  // mesafe durma mesafesinden büyükse yaklaþmaya devam ediyor   
         {
-            transform.position += transform.forward * speed * Time.deltaTime;
+            transform.position += transform.forward * speed * Time.deltaTime; // bizi takip eden düþmanýn hýzýný ayarlýyoruz. speed inspectordan deðiþebiliyor.
         }
     }
 }

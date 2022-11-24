@@ -16,23 +16,23 @@ public class Pickable : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)  // is trigger açýksa other yerine nesnemizi koyacak
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")  // tag player ise bu iþlem yapýlacak
         {
-            ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
-            scoreManager.score += scoreAmount;
+            ScoreManager scoreManager = FindObjectOfType<ScoreManager>(); // score managerý bulacak.
+            scoreManager.score += scoreAmount; // score arttýrma iþlemi yapýlýyor
             Destroy(gameObject);
         }
         
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player") // tag player ise bu iþlem yapýlacak
         {
             ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
             scoreManager.score += scoreAmount;
-            Destroy(gameObject);
+            Destroy(gameObject); // gameobject coin'e takýlý olduðu için coin yok edilecek.
         }
         
     }

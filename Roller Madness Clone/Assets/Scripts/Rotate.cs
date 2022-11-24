@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rotate : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private Vector3 angle;
+    [SerializeField] private Vector3 angle;  // vectorleri tek tek burda yazmak yerine angle adýnda vector3 deðiþkeni atadýk. SerializeField ile inspectordan deðiþim imkaný verdik
 
     void Start()
     {
@@ -15,6 +15,6 @@ public class Rotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(angle, Space.World);
+        transform.Rotate(angle, Space.World);  // transform.Rotate ile dönme iþlemini yerine getirirken space.world ile eksenleri global e getirmiþ olduk
     }
 }

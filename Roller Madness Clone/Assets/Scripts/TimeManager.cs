@@ -15,11 +15,11 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         
-        if (Time.time > levelFinishTime)
+        if (Time.time > levelFinishTime)  //süremiz oyunun bitme süresinden büyükse çalýþacak
         {
-            print(Time.time);
+            print(Time.time);  // zamaný yazdýracak
             gameFinished = true;
-            print("Next Level");
+            print("Next Level"); // sonraki level yazýsý basýlacak.
         }
     }
 }
