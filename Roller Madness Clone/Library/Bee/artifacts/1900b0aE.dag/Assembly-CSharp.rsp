@@ -370,6 +370,7 @@
 "Assets/Samples/Input System/1.3.0/Simple Multiplayer/SimpleMultiplayerPlayer.cs"
 "Assets/Scripts/Block.cs"
 "Assets/Scripts/CameraFollow.cs"
+"Assets/Scripts/DeadZone.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Move.cs"
 "Assets/Scripts/Pickable.cs"
