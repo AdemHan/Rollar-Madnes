@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private Transform target;
     [SerializeField] private float speed = 3f;
-    [SerializeField] private float stopDistance = 1f;
+    [SerializeField] private float stopDistance = -1000f;
     void Start()
     {
         target = GameObject.FindWithTag("Player").GetComponent<Transform>(); // player adlý tag i bulduk ve pozisyonunu çektik.

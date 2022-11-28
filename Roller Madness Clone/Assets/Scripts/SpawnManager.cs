@@ -11,17 +11,17 @@ public class SpawnManager : MonoBehaviour
     private float nextSpawnTime = 0f;  // oyunun basindan itibaren calismaya baslamasi icin 0 verdik
     void Start()
     {
-        spawnPositions[0].gameObject.name = "Test";  
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > nextSpawnTime)  // oyun ici zaman nextspawntime dan büyükse calisir
+        if (Time.timeSinceLevelLoad > nextSpawnTime )  // oyun ici zaman nextspawntime dan büyükse calisir
         {
             nextSpawnTime += spawnRate;  //spawnRate yani spawn araligi inspector üzerinden de degisebilir.
             SpawnObject(objects[RandomObjectNumber()], spawnPositions[RandomSpawnNumber()]);  // spawn edilecek nesnenin adý ve transform bilgisi
-            print("spawn");
+            print("spawned");
         }
     }
     private void SpawnObject(GameObject objectToSpawn, Transform newTransform)

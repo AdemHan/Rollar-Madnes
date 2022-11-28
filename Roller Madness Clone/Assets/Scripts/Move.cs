@@ -7,15 +7,17 @@ public class Move : MonoBehaviour
     private Vector3 movement;
     [SerializeField] private float speed = 10f;
     private Rigidbody rigidbody;
+    
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        
     }
 
     
     void Update()
-    {
-        MoveThePlayer();
+    {  
+            MoveThePlayer();
     }
 
     private void MoveThePlayer()
