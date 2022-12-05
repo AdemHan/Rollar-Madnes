@@ -7,17 +7,26 @@ public class Move : MonoBehaviour
     private Vector3 movement;
     [SerializeField] private float speed = 10f;
     private Rigidbody rigidbody;
+    private TimeManager timeManager;
     
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        timeManager = FindObjectOfType<TimeManager>();
         
     }
 
     
     void Update()
-    {  
+    {
+        if (timeManager.gameOver == false && timeManager.gameFinished == false )  // oyunu kaybetmemiþsek ve kazanmamýþsak oyuncu hareket etmeye devam eder.
+        {
             MoveThePlayer();
+        }
+        if (timeManager.gameOver || timeManager.gameFinished)  // oyunu kazanmýþsak veya kaybetmiþsek takip etmez
+        {
+            rigidbody.isKinematic = true;  // kinematik açýlýrsa hareket iþlevi kaybolur.
+        }
     }
 
     private void MoveThePlayer()

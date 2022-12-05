@@ -7,17 +7,17 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject[] objects;
     [SerializeField] private float spawnRate = 5f;          // kac saniyede bir spawn olacagini tutuyor
     [SerializeField] private Transform[] spawnPositions;  // Spawn noktalarýný dizi kullanarak belirledik
-    
+    private TimeManager timeManager;
     private float nextSpawnTime = 0f;  // oyunun basindan itibaren calismaya baslamasi icin 0 verdik
     void Start()
     {
-        
+        timeManager = FindObjectOfType<TimeManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeSinceLevelLoad > nextSpawnTime )  // oyun ici zaman nextspawntime dan büyükse calisir
+        if (Time.timeSinceLevelLoad > nextSpawnTime && timeManager.gameOver == false && timeManager.gameFinished == false)  // oyun ici zaman nextspawntime dan büyükse calisir
         {
             nextSpawnTime += spawnRate;  //spawnRate yani spawn araligi inspector üzerinden de degisebilir.
             SpawnObject(objects[RandomObjectNumber()], spawnPositions[RandomSpawnNumber()]);  // spawn edilecek nesnenin adý ve transform bilgisi

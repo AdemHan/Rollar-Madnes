@@ -20,8 +20,10 @@ public class TimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        UpdateTheTimer();
+        if (gameFinished == false && gameOver == false)
+        {
+            UpdateTheTimer();
+        }
 
         if (Time.timeSinceLevelLoad > levelFinishTime && gameOver == false)  //süremiz oyunun bitme süresinden büyükse ve oyun bitmediyse 
         {
