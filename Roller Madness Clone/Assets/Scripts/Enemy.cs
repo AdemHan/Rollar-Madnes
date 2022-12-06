@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     private Transform target;
     [SerializeField] private float speed = 3f;
     [SerializeField] private float stopDistance = -1000f;
+    [SerializeField] private GameObject deadEffect;
     void Start()
     {
         target = GameObject.FindWithTag("Player").GetComponent<Transform>(); // player adlý tag i bulduk ve pozisyonunu çektik.
@@ -34,5 +35,9 @@ public class Enemy : MonoBehaviour
             TimeManager timeManager = FindObjectOfType<TimeManager>();
             timeManager.gameOver = true;  
         }
+    }
+    private void OnDisable()
+    {
+        Instantiate(deadEffect, transform.position, transform.rotation);
     }
 }

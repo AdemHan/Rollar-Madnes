@@ -371,6 +371,7 @@
 "Assets/Scripts/Block.cs"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/DeadZone.cs"
+"Assets/Scripts/Destroyer.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/LevelManager.cs"
 "Assets/Scripts/Move.cs"

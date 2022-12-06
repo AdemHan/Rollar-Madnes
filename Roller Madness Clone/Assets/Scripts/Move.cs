@@ -8,7 +8,8 @@ public class Move : MonoBehaviour
     [SerializeField] private float speed = 10f;
     private Rigidbody rigidbody;
     private TimeManager timeManager;
-    
+    [SerializeField] private GameObject deadEffect;
+
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -36,5 +37,9 @@ public class Move : MonoBehaviour
         movement = new Vector3(x, 0f, z);
         //transform.position += movement;
         rigidbody.AddForce(movement);  // öznemizin hareketini fiziksel olarak saðlamak için addForce kullanarak üzerine kuvvet uyguladýk
+    }
+    private void OnDisable()
+    {
+        Instantiate(deadEffect, transform.position, transform.rotation);
     }
 }

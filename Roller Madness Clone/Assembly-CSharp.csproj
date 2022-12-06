@@ -76,6 +76,7 @@
     <Compile Include="Assets\Samples\Input System\1.3.0\Simple Multiplayer\SimpleMultiplayerPlayer.cs" />
     <Compile Include="Assets\Samples\Input System\1.3.0\Simple Demo\SimpleController_UsingState.cs" />
     <Compile Include="Assets\Scripts\Pickable.cs" />
+    <Compile Include="Assets\Scripts\Destroyer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
